@@ -5,7 +5,7 @@ def lambda_handler(event, context):
     currentTime = time.time()
     
     #CloudWatch Logs may not be available for export for up to 12 hours so logToTime is set to 12 hours ago and logFromTime 36 hours
-    logFromTime=int((currentTime - (currentTime % 3600) - 46800) * 1000)
+    logFromTime=int((currentTime - (currentTime % 3600) - 129600) * 1000)
     logToTime=int((currentTime - (currentTime % 3600) - 43200) * 1000)
     
     #Setup client

@@ -1,7 +1,7 @@
 resource "aws_cloudwatch_event_rule" "copy_log" {
   name        = "${var.CW_RULE_NAME}"
   description = "Launch Lambda to copy cloudwatch logs to s3"
-  schedule_expression = "cron(00 02 * * ? *)"
+  schedule_expression = "cron(00 * * * ? *)"
 }
 
 resource "aws_lambda_permission" "allow_cloudwatch" {
